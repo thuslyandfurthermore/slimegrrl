@@ -1,0 +1,93 @@
+body {
+  background-image: url("background.png");
+  font-family: monospace;
+  }
+
+#container {
+  position: fixed;
+  width: 75%;
+  background-color: #111;
+  top: 20px;
+  bottom: 20px;
+  left: 12.5%;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+#main {
+  border: 2px solid white;
+  bottom: 0px;
+  max-height: auto;
+  overflow: auto;
+  flex-grow: 1;
+  text-align: left;
+  color: #f28;
+  overflow-wrap: 
+}
+
+#main p {
+  margin: 10px;
+  }
+
+#main h2 {
+  color: #a14;
+  margin: 10px;
+  }
+
+#emily {
+  color: #f8c;
+  }
+
+#vicky {
+  color: #d2d;
+  }
+
+#foot, #footscroll {
+  border: 2px solid white;
+  border-top: 0px;
+  bottom: 0px;
+  flex-basis: 50px;
+  flex-shrink: 0;
+  font-size: 12pt;
+  color: #bbb;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  height: 50px;
+}
+
+#footscroll {
+  overflow: auto;
+}
+
+a:link {color: #f4a}
+a:visited {color: #d28}
+a:hover {color: #f6c}
+a:active {color: #d00}
+
+#foot #button,#currenttab {
+  border: 1px inset #444;
+  flex-grow: 1;
+  text-align: center;
+  flex-direction: column;
+  }
+
+#footscroll #button, #footscroll #currenttab {
+  border: 1px inset #444;
+  flex-shrink: 0;
+  flex-grow: 0;
+  text-align: center;
+  flex-direction: column;
+  }
+
+#foot #button, #foot #currenttab {flex-grow: 1}
+#footscroll #button, #footscroll #currenttab p {
+  padding-left: 10px;
+  padding-right: 10px;
+  }
+
+#button {background-color: #222}
+#currenttab {
+  background-color: #444;
+}
