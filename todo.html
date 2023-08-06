@@ -5,6 +5,7 @@
   <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
   <link rel="stylesheet" href="styles/style.css"/>
   <title>todo</title>
+  <script src="include.js"></script>
 </head>
 <body>
   <div id="container">
@@ -14,27 +15,24 @@
         <li><strike>irresponsibly purchase server time</strike></li>
         <li><strike>make basic web page template</strike></li>
         <li><strike>populate with a few pages</strike></li>
-        <li><strike>set up git repository in /var/www/html</strike></li>
-        <li><strike>set up apache server</strike><strike>set up plesk</strike></li>
+        <li><strike>set up git repository</strike></li>
+        <li><strike>set up apache server</strike> <strike>set up plesk</strike></li>
         <li><strike>figure out why slimegrrl.life isnt pointing to server</strike></li>
-        <li>show off to v</li>
+        <li><strike>show off to v</strike></li>
         <li>show off to everbody else</li>
         <li><strike>install ssl certificate</strike></li>
-        <li>make irc server at irc.slimegrrl.life</li>
+        <li><strike>make irc server at irc.slimegrrl.life</strike></li>
+        <li>set up irc client</li>
+        <li>responsive html ughhhh</li>
+        <li>enprettification</li>
       </ul>
     </div>
-    <div id="foot">
-      <a href="index.html" id="currenttab"><p>home</p></a>
-      <a href="mastodon.html" id="button"><p>mastodon</p></a>
-      <a href="irc.html" id="button"><p>irc</p></a>
-      <a href="other.html" id="button"><p>other shit</p></a>
-    </div>
-    <div id="footscroll">
-      <a href="musicthoughts.html" id="button"><p>music thoughts</p></a>
-      <a href="todo.html" id="button"><p>to-do list</p></a>
-      <a href="mastodon.html" id="button"><p>addtl</p></a>
-      <a href="irc.html" id="button"><p>footspace</p></a>
-    </div>
+    <div include-html="foot.html" id="foot"></div>
+    <div include-html="footscroll.html" id="footscroll"></div>
   </div>
+<script>
+    includeHTML();
+    addCurrentTab();
+</script>
 </body>
 </html>
