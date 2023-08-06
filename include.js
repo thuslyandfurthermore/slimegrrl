@@ -25,3 +25,19 @@ function includeHTML() {
     }
   }
 }
+
+
+function addCurrentTab() {
+    var z,i,elmnt,path;
+    z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+      elmnt = z[i];
+      path = elmnt.getAttribute("href");
+      if (path) {
+          if (path = window.location.pathname) {
+              elmnt.removeAttribute("id");
+              elmnt.setAttribute("id", "currenttab");
+          }
+      }
+  }
+}
