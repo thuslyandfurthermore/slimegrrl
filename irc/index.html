@@ -4,22 +4,23 @@
 <head>
   <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/style.css"/>
+  <link rel="stylesheet" href="/styles/style.css"/>
   <title>chat it up</title>
-  <script src="include.js"></script>
+  <script src="/scripts/include.js"></script>
 </head>
 <body>
   <div id="container">
     <div id="main">
       <h2>hang out with us</h2>
       <p>i wanna be able to upload images on this page below the chat screen, generate a url for them, post the url in irc and have it visible, and autodelete the image after 24h. idk how possible that is lmao but i wanna</p>
-      <p align="center"><iframe src="https://kiwiirc.com/client/irc.slimegrrl.life?&theme=cli#public" style="border:0; width:100%; height:450px;"></iframe></p>
+      <p id="debug"></p>
+      <!--p align="center"><iframe src="https://kiwiirc.com/client/irc.slimegrrl.life?&theme=cli#public" style="border:0; width:100%; height:450px;"></iframe></p-->
     </div>
-    <div include-html="foot.html" id="foot"></div>
+    <div include-html="/include/foot.html" id="foot"></div>
   </div>
 <script>
     includeHTML();
-    addCurrentTab();
+    window.addEventListener("load", addCurrentTab);
 </script>
 </body>
 </html>
