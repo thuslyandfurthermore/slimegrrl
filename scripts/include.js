@@ -46,6 +46,7 @@ function addCurrentTab() {
       elmnt = z[i];;
       path = elmnt.getAttribute("href");
       console.log(elmnt.tagName);
+      console.log(path);
       
       if (path == window.location.pathname) {
         
@@ -54,6 +55,7 @@ function addCurrentTab() {
         
     }
     }
+    console.log(window.location.pathname);
 //  });
 }
 

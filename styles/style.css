@@ -2,6 +2,7 @@ body {
   background-image: url("background.png");
   background-size: 80px;
   font-family: monospace;
+  line-height: 1.5;
   }
 
 #container {
@@ -28,6 +29,7 @@ body {
 
 #main p {
   margin: 10px;
+  margin-bottom: 2em;
   }
 
 #main h2 {
@@ -66,27 +68,33 @@ a:hover {color: #f6c}
 a:active {color: #d00}
 
 #foot #button,#currenttab {
-  border: 1px inset #444;
   flex-grow: 1;
   text-align: center;
   flex-direction: column;
   }
 
 #footscroll #button, #footscroll #currenttab {
-  border: 1px inset #444;
   flex-shrink: 0;
   flex-grow: 0;
   text-align: center;
   flex-direction: column;
   }
 
-#foot #button, #foot #currenttab {flex-grow: 1}
 #footscroll #button, #footscroll #currenttab p {
   padding-left: 10px;
   padding-right: 10px;
   }
 
-#button {background-color: #222}
+#button {
+  background-color: #222;
+  border: 1px outset #444;
+}
 #currenttab {
   background-color: #444;
+  border: 1px inset #555;
+}
+
+li {
+  margin-bottom: 1em;
+  line-height: 1.2
 }

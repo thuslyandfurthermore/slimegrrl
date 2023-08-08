@@ -12,15 +12,22 @@
   <div id="container">
     <div id="main">
       <h2>hang out with us</h2>
-      <p>i wanna be able to upload images on this page below the chat screen, generate a url for them, post the url in irc and have it visible, and autodelete the image after 24h. idk how possible that is lmao but i wanna</p>
+      <p id="emily">webclient isnt working for,,, some reason,,, so configure your own irc client for now lol</p>
+      <p id="emily"><ul>
+        <li>server address: irc.slimegrrl.life</li>
+        <li>port: 6697</li>
+        <li>ssl/tls: enabled</li>
+        <li id="emily">pls enable ignore invalid certificates while i work out what im doing lol</li>
+        <li>channel: #public</li>
+      </ul>
+      <p id="emily">eventually there will be a utility here to upload images n stuff and give you a link to post in chat</p>
       <p id="debug"></p>
-      <!--p align="center"><iframe src="https://kiwiirc.com/client/irc.slimegrrl.life?&theme=cli#public" style="border:0; width:100%; height:450px;"></iframe></p-->
+      <p align="center"><iframe src="https://kiwiirc.com/client/irc.slimegrrl.life?&theme=cli#public" style="border:0; width:100%; height:450px;"></iframe></p>
     </div>
     <div include-html="/include/foot.html" id="foot"></div>
   </div>
 <script>
     includeHTML();
-    window.addEventListener("load", addCurrentTab);
 </script>
 </body>
 </html>
