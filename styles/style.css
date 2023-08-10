@@ -98,7 +98,21 @@ a:active {color: #d00}
   border: 1px inset #555;
 }
 
+#bigbutton {
+  flex-grow: 1;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 100%;
+  background-color: #222;
+  font-size: 150%;
+  line-height: 20px;
+  border: 1px outset #444;
+}
+
 li {
   margin-bottom: 1em;
-  line-height: 1.2
+  line-height: 1.2;
 }
