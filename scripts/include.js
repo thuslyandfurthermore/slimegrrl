@@ -51,7 +51,7 @@ function addCurrentTab() {
       if (path == window.location.pathname) {
         
       //  debug.innerHTML = path;
-        elmnt.setAttribute("id", "currenttab");
+        elmnt.setAttribute("class", "currenttab");
         
     }
     }

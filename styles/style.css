@@ -42,11 +42,11 @@ h2 {
   text-align: center;
   }
 
-#emily {
+.emily {
   color: #f8c;
   }
 
-#vicky {
+.vicky {
   color: #d2d;
   }
 
@@ -72,34 +72,34 @@ a:visited {color: #d28}
 a:hover {color: #f6c}
 a:active {color: #d00}
 
-#foot #button,#currenttab {
+#foot .button,.currenttab {
   flex-grow: 1;
   text-align: center;
   flex-direction: column;
   }
 
-#footscroll #button, #footscroll #currenttab {
+#footscroll .button, #footscroll .currenttab {
   flex-shrink: 0;
   flex-grow: 0;
   text-align: center;
   flex-direction: column;
   }
 
-#footscroll #button, #footscroll #currenttab p {
+#footscroll .button, #footscroll .currenttab p {
   padding-left: 10px;
   padding-right: 10px;
   }
 
-#button {
+.button {
   background-color: #222;
   border: 1px outset #444;
 }
-#currenttab {
+.currenttab {
   background-color: #444;
   border: 1px inset #555;
 }
 
-#bigbutton {
+.bigbutton {
   flex-grow: 1;
   text-align: center;
   padding-top: 20px;
@@ -113,7 +113,7 @@ a:active {color: #d00}
   border: 1px outset #444;
 }
 
-#gallery {
+.gallery {
   display: flex;
   flex-direction: column;
   width: 90%;
@@ -123,7 +123,7 @@ a:active {color: #d00}
   left: 5%;
 }
 
-#galtitle {
+.galtitle {
   text-align: center;
   align-content: center;
   justify-content: center;
@@ -132,7 +132,7 @@ a:active {color: #d00}
   background-color: #333;
 }
 
-#galmain {
+.galmain {
   display: flex;
   padding: 2px;
   flex-direction: row;
@@ -144,18 +144,18 @@ a:active {color: #d00}
   
 }
 
-#galitem {
+.galitem {
   flex-grow: 1;
   flex-basis: 31%;
   margin: 1%;
   min-width: 90px;
 }
 
-#galitem img {
+.galitem img {
   width: 100%;
 }
 
-#galdesc {
+.galdesc {
   
   line-height: 1.5;
   font-size: 75%;
