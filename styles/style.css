@@ -164,5 +164,6 @@ a:active {color: #d00}
 
 li {
   margin-bottom: 1em;
+  margin-right: 10px;
   line-height: 1.2;
 }
