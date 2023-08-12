@@ -22,12 +22,26 @@
       </ul>
       <p class="emily">thelounge has file upload support but be sparing lol we only have an 80gb space to work with</p>
       <div style="display: flex; flex-direction: row"><a class="bigbutton" href="https://irc.slimegrrl.life/">click here to start the lounge</a></div>
+      <p></p>
+      
+      <div style="display: flex; flex-direction: row"><button class="bigbutton" id="showDialog"><a>register for our lounge client</a></button></div>
       
     </div>
     <div include-html="/include/foot.html" id="foot"></div>
   </div>
+  
+<dialog id="regDialog">
+  <form method="dialog">
+    <p>this defo does nothing for now, until i can figure out server side shit. dont uh, hold yr breath? ask me and ill register you, your password will be password lmao</p>
+    <p><label>username (a-z, 0-9, -, _, no commas or spaces or weird shit, 20 characters max):<input type="text" id="uname" placeholder="cutie"/></label></p>
+    <p><label>password (stored hashed on our server):<input type="password" placeholder="hunter2"></label></p>
+    <input type="submit" id="confirmButton" value="register">
+  </form>
+</dialog>
+
 <script>
     includeHTML();
 </script>
+<script src="/scripts/register.js"></script>
 </body>
 </html>
