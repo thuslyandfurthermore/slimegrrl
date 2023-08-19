@@ -169,3 +169,7 @@ li {
   margin-right: 10px;
   line-height: 1.2;
 }
+
+form {
+  margin: 10px;
+}
