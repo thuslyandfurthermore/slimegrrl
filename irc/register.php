@@ -20,22 +20,40 @@
     if (empty($_POST["username"])) {
       $usernameError = "enter a username pls";
     } else {
-      $username = test_input($_POST["name"]);
+      $username = test_input($_POST["username"]);
       // check if name only contains letters and whitespace
       if (!preg_match("/^[a-zA-Z0-9-_]*$/",$username)) {
         $usernameError = "a-z, 0-9, -, _ only";
       }
-    }
-    
-    if (empty($_POST["email"])) {
-      $passwordError = "Email is required";
-    } else {
-      $password = test_input($_POST["password"]);
-      // check if e-mail address is well-formed
-      if (!preg_match("/^[a-zA-Z0-9-_]*$/",$password)) {
-        $passwordError = "Invalid email format";
+      else {
+        $usernamePassed = true;
       }
     }
+    
+    if (empty($_POST["password"])) {
+      $passwordError = "password is required";
+    } else {
+      $password = test_input($_POST["password"]);
+      if (!preg_match("/^[a-zA-Z0-9-_]*$/",$password)) {
+        $passwordError = "a-z, 0-9, -, _ only";
+      } else {
+          $hash = password_hash($password);
+          $passwordpassed = true;
+      }
+    }
+    
+    if ($usernamePassed && $passwordpassed) {
+      
+      if (!$file = fopen("/etc/thelounge/users/" . $username . ".json", 'x')) {
+        $error = "user already exists!!";
+      } else {
+        fwrite($file, "{\n       \"password\":\"" . $hash . "\",\n        \"log\": true\n}");
+        fclose($file);
+        mail('emily@slimegrrl.life', 'acct created', 'made an account for' . $username);
+      }
+      
+    }
+    
   }
   function test_input($data) {
     $data = trim($data);
@@ -54,9 +72,10 @@
       
       <p>pls refrain from pentesting my server its v fragile rn lol</p>
       
-      <form action="/register.php" method="POST">
-          <p><label>username (a-z, 0-9, -, _, no &lt; or spaces or weird shit, 20 characters max):<br><input type="text" id="username" placeholder="cutie" value="<?php echo $username; ?>"><?php echo $usernameError; ?></label></p>
-          <p><label>password (stored hashed on our server):<br><input type="password" placeholder="hunter2" value="<?php echo $password; ?>"><?php echo $passwordError; ?></label></p>
+      <form action="/irc/register.php" method="POST">
+        <p><?php echo $error ?></p>
+          <p><label>username (a-z, 0-9, -, _, no &lt; or spaces or weird shit, 50 characters max):<br><input type="text" id="username" placeholder="cutie" maxlength="50"><?php echo $usernameError; ?></label></p>
+          <p><label>password (same restrictions as username, stored hashed on our server):<br><input type="password" placeholder="hunter2" maxlength="50"><?php echo $passwordError; ?></label></p>
           <input type="submit" id="confirmButton" value="register">
         </form>
       
