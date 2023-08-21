@@ -173,3 +173,13 @@ li {
 form {
   margin: 10px;
 }
+
+.error {
+  background-color: #444;
+  color: #faa;
+}
+
+.success {
+  background-color: #444;
+  color: #afa;
+}
