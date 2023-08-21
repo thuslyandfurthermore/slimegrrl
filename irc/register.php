@@ -61,10 +61,13 @@
     
     if ($usernamePassed && $passwordpassed) {
       
+      if (file_exists("/etc/thelounge/users/$username.json")) {
+        $error = "user already exists!!";
+      }
       
       if (!$file = fopen("/etc/thelounge/users/$username.json", 'x')) {
         
-        $error = "user already exists!!";
+        $error = "failed to open file!!";
         
       } else {
         
