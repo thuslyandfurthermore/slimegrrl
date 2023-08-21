@@ -74,8 +74,8 @@
       
       <form action="/irc/register.php" method="POST">
         <p><?php echo $error ?></p>
-          <p><label>username (a-z, 0-9, -, _, no &lt; or spaces or weird shit, 50 characters max):<br><input type="text" id="username" placeholder="cutie" maxlength="50"><?php echo $usernameError; ?></label></p>
-          <p><label>password (same restrictions as username, stored hashed on our server):<br><input type="password" placeholder="hunter2" maxlength="50"><?php echo $passwordError; ?></label></p>
+          <p><label>username (a-z, 0-9, -, _, no &lt; or spaces or weird shit, 50 characters max):<br><input type="text" name="username" placeholder="cutie" maxlength="50"><?php echo $usernameError; ?></label></p>
+          <p><label>password (same restrictions as username, stored hashed on our server):<br><input type="password" placeholder="hunter2" name="password" maxlength="50"><?php echo $passwordError; ?></label></p>
           <input type="submit" id="confirmButton" value="register">
         </form>
       
