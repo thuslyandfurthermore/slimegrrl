@@ -9,63 +9,51 @@
   <script src="/scripts/include.js"></script>
 </head>
 <body>
-  
-  <?= $debug ?>
+
 
   <?php
   
-  $usernameError = $passwordError = $error = $debug = "";
+  $usernameError = $passwordError = $error = "";
   $username = $password = "";
   
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
-    $debug = "1";
     
     if (empty($_POST["username"])) {
       
-      $debug = "1a";
       $usernameError = "enter a username pls";
       
     } else {
       
-      $debug = "2";
       $username = test_input($_POST["username"]);
       
       if (!preg_match("/^[a-zA-Z0-9-_]*$/",$username)) {
         
-        $debug = "2a";
         $usernameError = "a-z, 0-9, -, _ only";
         
       }
       else {
         
-        $debug = "3";
         $usernamePassed = true;
         
       }
     }
     
-    $debug = "4";
-    
     if (empty($_POST["password"])) {
       
-      $debug = "4a";
       $passwordError = "password is required";
       
     } else {
       
-      $debug = "5";
       $password = test_input($_POST["password"]);
       
       if (!preg_match("/^[a-zA-Z0-9-_]*$/",$password)) {
         
-        $debug = "5a";
         $passwordError = "a-z, 0-9, -, _ only";
         
       } else {
         
-        $debug = "6";
-        $hash = password_hash($password);
+        $hash = password_hash($password, PASSWORD_BCRYPT);
         $passwordpassed = true;
         
       }
@@ -73,24 +61,17 @@
     
     if ($usernamePassed && $passwordpassed) {
       
-      $debug = "7";
       
       if (!$file = fopen("/etc/thelounge/users/$username.json", 'x')) {
         
-        $debug = "7a";
         $error = "user already exists!!";
         
       } else {
         
-        $debug = "8";
         fwrite($file, "{\r\n       \"password\":\"$hash\",\r\n        \"log\": true\r\n}");
-        $debug = "9";
         fclose($file);
-        $debug = "10";
         mail('emily@slimegrrl.life', 'acct created', 'made an account for' . $username);
-        $debug = "11";
         $error = "successfully registered!!";
-        $debug = "12";
         
       }
       
