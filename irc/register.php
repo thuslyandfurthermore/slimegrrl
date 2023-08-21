@@ -73,8 +73,12 @@
         
         fwrite($file, "{\r\n       \"password\":\"$hash\",\r\n        \"log\": true\r\n}");
         fclose($file);
-        mail('emily@slimegrrl.life', 'acct created', 'made an account for' . $username);
+        if (mail('emily@slimegrrl.life', 'acct created', "made an account for $username", "From: emily@slimegrrl.life")) {
         $error = "<span class=\"success\">successfully registered!!</span>";
+        }
+        else {
+          $error = "<span class=\"error\">it worked but mail failed</span>";
+        }
         
       }
       
