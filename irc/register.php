@@ -17,7 +17,7 @@
   $usernameError = $passwordError = $error = $debug = "";
   $username = $password = "";
   
-  if ($_SERVER["REQUEST_METHOD"] == "GET") {
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     $debug = "1";
     
@@ -29,7 +29,7 @@
     } else {
       
       $debug = "2";
-      $username = test_input($_GET["username"]);
+      $username = test_input($_POST["username"]);
       
       if (!preg_match("/^[a-zA-Z0-9-_]*$/",$username)) {
         
@@ -47,7 +47,7 @@
     
     $debug = "4";
     
-    if (empty($_GET["password"])) {
+    if (empty($_POST["password"])) {
       
       $debug = "4a";
       $passwordError = "password is required";
@@ -114,7 +114,7 @@
       
       <p>pls refrain from pentesting my server its v fragile rn lol</p>
       
-      <form action="/irc/register.php" method="get">
+      <form action="/irc/register.php" method="post">
         <p><?php echo $error ?></p>
           <p>
             <label>username (a-z, 0-9, -, _, no &lt;&gt; or spaces or weird shit, 50 characters max):<br><input type="text" name="username" placeholder="cutie" maxlength="50">
