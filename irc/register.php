@@ -44,12 +44,13 @@
     
     if ($usernamePassed && $passwordpassed) {
       
-      if (!$file = fopen("/etc/thelounge/users/" . $username . ".json", 'x')) {
+      if (!$file = fopen("/etc/thelounge/users/$username.json", 'x')) {
         $error = "user already exists!!";
       } else {
-        fwrite($file, "{\n       \"password\":\"" . $hash . "\",\n        \"log\": true\n}");
+        fwrite($file, "{\n       \"password\":\"$hash\",\n        \"log\": true\n}");
         fclose($file);
-        mail('emily@slimegrrl.life', 'acct created', 'made an account for' . $username);
+        //mail('emily@slimegrrl.life', 'acct created', 'made an account for' . $username);
+        $error = "successfully registered!!";
       }
       
     }
@@ -74,8 +75,16 @@
       
       <form action="/irc/register.php" method="POST">
         <p><?php echo $error ?></p>
-          <p><label>username (a-z, 0-9, -, _, no &lt; or spaces or weird shit, 50 characters max):<br><input type="text" name="username" placeholder="cutie" maxlength="50"><?php echo $usernameError; ?></label></p>
-          <p><label>password (same restrictions as username, stored hashed on our server):<br><input type="password" placeholder="hunter2" name="password" maxlength="50"><?php echo $passwordError; ?></label></p>
+          <p>
+            <label>username (a-z, 0-9, -, _, no &lt;&gt; or spaces or weird shit, 50 characters max):<br><input type="text" name="username" placeholder="cutie" maxlength="50">
+              <?php echo $usernameError ?>
+            </label>
+          </p>
+          <p>
+            <label>password (same restrictions as username, stored hashed on our server):<br><input type="password" placeholder="hunter2" name="password" maxlength="50">
+              <?php echo $passwordError ?>
+            </label>
+          </p>
           <input type="submit" id="confirmButton" value="register">
         </form>
       
