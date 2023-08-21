@@ -62,23 +62,26 @@
     if ($usernamePassed && $passwordpassed) {
       
       if (file_exists("/etc/thelounge/users/$username.json")) {
+        
         $error = "<span class=\"error\">user already exists!!</span>";
-      }
-      
-      if (!$file = fopen("/etc/thelounge/users/$username.json", 'x')) {
         
-        $error = "<span class=\"error\">failed to open file!!</span>";
+      } elseif (!$file = fopen("/etc/thelounge/users/$username.json", 'x')) {
         
-      } else {
+          $error = "<span class=\"error\">failed to open file!!</span>";
         
-        fwrite($file, "{\r\n       \"password\":\"$hash\",\r\n        \"log\": true\r\n}");
-        fclose($file);
-        if (mail('emily@slimegrrl.life', 'acct created', "made an account for $username", "From: emily@slimegrrl.life")) {
-        $error = "<span class=\"success\">successfully registered!!</span>";
-        }
-        else {
-          $error = "<span class=\"error\">it worked but mail failed</span>";
-        }
+        } else {
+        
+          fwrite($file, "{\r\n       \"password\":\"$hash\",\r\n        \"log\": true\r\n}");
+          fclose($file);
+          
+          if (mail('root@localhost', 'acct created', "made an account for $username")) {
+            
+            $error = "<span class=\"success\">successfully registered!!</span>";
+            
+          } else {
+            
+            $error = "<span class=\"success\">registration worked but mail failed</span>";
+          }
         
       }
       
