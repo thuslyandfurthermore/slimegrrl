@@ -74,7 +74,7 @@
           fwrite($file, "{\r\n       \"password\":\"$hash\",\r\n        \"log\": true\r\n}");
           fclose($file);
           
-          if (mail('root@ubuntu.localdomain', 'acct created', "made an account for $username")) {
+          if (mail('root', 'acct created', "made an account for $username")) {
             
             $error = "<span class=\"success\">successfully registered!!</span>";
             
