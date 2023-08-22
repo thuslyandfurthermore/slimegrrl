@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/styles/style.css"/>
   <title>register for the lounge</title>
-  <script src="/scripts/include.js"></script>
+  <script src="/scripts/hilite.js"></script>
 </head>
 <body>
 
@@ -133,10 +133,10 @@
         <p class="emily">there are restrictions on what you can put in the password on this form, because im incompetent and idk how the escaping or whatever will interact with the lounge's escaping? but you can change it l8r through the lounge's interface</p>
       
     </div>
-    <div include-html="/include/foot.html" id="foot"></div>
+    <div id="foot"><!--#include virtual="/include/foot.html" --></div>
   </div>
 <script>
-  includeHTML();
+  addCurrentTab();
 </script>
 
 </body>

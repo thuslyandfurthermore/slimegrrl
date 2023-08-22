@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/styles/style.css"/>
   <title>hey cutie~</title>
-  <script src="/scripts/include.js"></script>
+  <script src="/scripts/hilite.js"></script>
 </head>
 <body>
   <div id="container">
@@ -19,7 +19,7 @@
     <div id="foot"><!--#include virtual="/include/foot.html" --></div>
   </div>
 <script>
-  includeHTML();
+  addCurrentTab();
 </script>
 </body>
 </html>
