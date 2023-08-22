@@ -17,8 +17,8 @@
       <p class="emily">im just gonna infodump about music here i need to occasionally lmao</p>
       <p class="emily">i wonder what it would cost to put my whole music library here...</p>
     </div>
-    <div id="foot" include-html="/include/foot.html"></div>
-    <div id="footscroll" include-html="/include/footscroll.html"></div>
+    <div id="foot"><!--#include virtual="/include/foot.html" --></div>
+    <div id="footscroll"><!--#include virtual="/include/footscroll.html" --></div>
   </div>
 <script>
     includeHTML();

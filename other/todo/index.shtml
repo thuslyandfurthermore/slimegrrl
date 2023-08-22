@@ -68,8 +68,8 @@
         <li><s>make the image uploader thing</s> thnq the lounge</li>
       </ul>
     </div>
-    <div include-html="/include/foot.html" id="foot"></div>
-    <div include-html="/include/footscroll.html" id="footscroll"></div>
+    <div id="foot"><!--#include virtual="/include/foot.html" --></div>
+    <div id="footscroll"><!--#include virtual="/include/footscroll.html" --></div>
   </div>
 <script>
     includeHTML();

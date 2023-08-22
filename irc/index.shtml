@@ -31,7 +31,7 @@
       <p class="emily">the lounge will stay connected even if your browser is closed so you can see previous messages and will notify u if youre mentioned. it seems to be the best irc client for android, at least that i've tried. it has support for uploading files to our server and posting the link to chat</p>
       
     </div>
-    <div include-html="/include/foot.html" id="foot"></div>
+    <div id="foot"><!--#include virtual="/include/foot.html" --></div>
   </div>
 <script>
     includeHTML();

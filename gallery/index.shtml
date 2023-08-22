@@ -47,7 +47,7 @@
         </div>
       </div>
       </div>
-    <div include-html="/include/foot.html" id="foot"></div>
+     <div id="foot"><!--#include virtual="/include/foot.html" --></div>
   </div>
 <script>
     includeHTML();

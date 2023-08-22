@@ -27,8 +27,8 @@
       </ul>
       
     </div>
-    <div include="/include/foot.html" id="foot"><!--#include virtual="/include/foot.html" --></div>
-    <div include="/include/footscroll.html" id="footscroll"><!--#include virtual="/include/footscroll.html" --></div>
+    <div id="foot"><!--#include virtual="/include/foot.html" --></div>
+    <div id="footscroll"><!--#include virtual="/include/footscroll.html" --></div>
   </div>
 <script>
   includeHTML();

@@ -13,8 +13,8 @@
     <div id="main">
       <p class="emily">in case we wanna make some lil subsites or w/e</p>
     </div>
-    <div include-html="/include/foot.html" id="foot"></div>
-    <div id="footscroll" include-html="/include/footscroll.html"></div>
+    <div id="foot"><!--#include virtual="/include/foot.html" --></div>
+    <div id="footscroll"><!--#include virtual="/include/footscroll.html" --></div>
   </div>
 <script>
     includeHTML();
