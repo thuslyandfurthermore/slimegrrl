@@ -133,7 +133,7 @@
         <p class="emily">there are restrictions on what you can put in the password on this form, because im incompetent and idk how the escaping or whatever will interact with the lounge's escaping? but you can change it l8r through the lounge's interface</p>
       
     </div>
-    <div id="foot"><?php require '/include/foot.php'; ?></div>
+    <div id="foot"><?php include "../include/foot.php"; ?></div>
   </div>
 <script>
   addCurrentTab();
