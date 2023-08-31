@@ -52,7 +52,7 @@
         
         $passwordError = "invalid password";
         
-        if ($password != $_POST[password2]) {
+        if ($password != $_POST["password2"]) {
           
           $passmatch = "passwords must match";
           
@@ -109,6 +109,8 @@
       <p class="emily">i fuckin did it you can register for the lounge now!!!</p>
       
       <p>pls refrain from pentesting our server its v fragile rn lol</p>
+      
+      <p><?php echo $error ?></p>
       
       <form action="/irc/register.php" method="post">
         <?php echo $error ?>
