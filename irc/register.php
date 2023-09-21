@@ -5,19 +5,17 @@
   <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/styles/style.css"/>
-  <title>register for the lounge</title>
-  <script src="/scripts/hilite.js"></script>
+  <title>title</title>
+  <script src="/scripts/include.js"></script>
 </head>
 <body>
 
 
   <?php
   
-  $usernameError = $passwordError = $passmatch = $error = "";
+  $usernameError = $passwordError = $error = "";
   $username = $password = "";
   
-  
-  //dont run on normal open
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     
@@ -32,6 +30,7 @@
       if (!preg_match("/^[a-zA-Z0-9-_]*$/",$username)) {
         
         $usernameError = "invalid username";
+        
       }
       else {
         
@@ -52,45 +51,35 @@
         
         $passwordError = "invalid password";
         
-        if ($password != $_POST["password2"]) {
-          
-          $passmatch = "passwords must match";
-          
-        } else {
+      } else {
         
-          $hash = password_hash($password, PASSWORD_BCRYPT);
-          $passwordpassed = true;
+        $hash = password_hash($password, PASSWORD_BCRYPT);
+        $passwordpassed = true;
         
-        }
       }
     }
     
     if ($usernamePassed && $passwordpassed) {
       
       if (file_exists("/etc/thelounge/users/$username.json")) {
+        $error = "<span class=\"error\">user already exists!!</span>";
+      }
+      
+      if (!$file = fopen("/etc/thelounge/users/$username.json", 'x')) {
         
-        $error = "<h2 class=\"error\">user already exists!!</h2>";
-        
-        
-      } elseif (!$file = fopen("/etc/thelounge/users/$username.json", 'x')) {
-        
-        $error = "<h2 class=\"error\">failed to open file!!</h2>";
+        $error = "<span class=\"error\">failed to open file!!</span>";
         
       } else {
         
         fwrite($file, "{\r\n       \"password\":\"$hash\",\r\n        \"log\": true\r\n}");
         fclose($file);
-          
-        if (mail('root', 'acct created', "made an account for $username")) {
-            
-          $error = "<h2 class=\"success\">successfully registered!!</h2>";
-            
-        } else {
-            
-          $error = "<h2 class=\"success\">registration worked but mail failed</h2>";
-        }
+        mail('emily@slimegrrl.life', 'acct created', 'made an account for' . $username);
+        $error = "<span class=\"success\">successfully registered!!</span>";
+        
       }
+      
     }
+    
   }
   function test_input($data) {
     $data = trim($data);
@@ -110,29 +99,20 @@
       
       <p>pls refrain from pentesting our server its v fragile rn lol</p>
       
-      <p><?php echo $error ?></p>
-      
       <form action="/irc/register.php" method="post">
-        <?php echo $error ?>
-
+        <p><?php echo $error ?></p>
+          <p>
             <label>username (a-z, 0-9, -, _, no &lt;&gt; or spaces or weird shit, 50 characters max):<br><input type="text" name="username" placeholder="cutie" maxlength="50">
               <span class="error"><?php echo $usernameError ?></span>
-            </label><br><br>
-
-
+            </label>
+          </p>
+          <p>
             <label>password (same restrictions as username, stored hashed on our server):<br><input type="password" placeholder="hunter2" name="password" maxlength="50">
               <span class="error"><?php echo $passwordError ?></span>
-            </label><br><br>
-
-
-            <label>re-enter password:<br>
-              <input type="password" name="password2" maxlength="50"><span class="error"><?php echo $passmatch ?></span>
-            </label><br><br>
- 
-          <input type="submit" id="confirmButton" value="register"><br>
+            </label>
+          </p>
+          <input type="submit" id="confirmButton" value="register">
         </form>
-        
-        <p class="emily">there are restrictions on what you can put in the password on this form, because im incompetent and idk how the escaping or whatever will interact with the lounge's escaping? but you can change it l8r through the lounge's interface</p>
       
     </div>
     <div id="foot"><?php include "../include/foot.php"; ?></div>
