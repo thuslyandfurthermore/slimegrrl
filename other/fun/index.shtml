@@ -5,23 +5,29 @@
   <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/styles/style.css"/>
-  <title>music rambling with emmy</title>
+  <title>title</title>
   <script src="/scripts/scripts.js"></script>
 </head>
 <body>
   <div id="container">
     <div id="main">
-      <h2>music rambling with emmy</h2>
-      <p>currently way into:</p>
-      <p style="text-align: center" class="emily">breakcore and hardcore</p>
-      <p class="emily">im just gonna infodump about music here i need to occasionally lmao</p>
-      <p class="emily">i wonder what it would cost to put my whole music library here...</p>
+      
+      <ul class="emily">
+        <li>make form with dropdown items for styles on this page</li>
+        <li>use setCookie function to make a cookie with name "style" and value of dropdown</li>
+        <li>create getStyle function that replaces any "style.css" with the value of the cookie</li>
+        <ul>
+          <li>that way if js isnt enabled itll default to style.css</li>
+        </ul>
+        <li>add getStyle(); to each page</li>
+      </ul>
+      
     </div>
     <div id="foot"><!--#include virtual="/include/foot.html" --></div>
     <div id="footscroll"><!--#include virtual="/include/footscroll.html" --></div>
   </div>
 <script>
-    addCurrentTab();
+  addCurrentTab();
 </script>
 </body>
 </html>
