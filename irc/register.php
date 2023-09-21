@@ -5,7 +5,7 @@
   <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/styles/style.css"/>
-  <title>title</title>
+  <title>register for the lounge</title>
   <script src="/scripts/hilite.js"></script>
 </head>
 <body>
@@ -95,7 +95,7 @@
     <div id="main">
       
       <h2>register for the lounge irc</h2>
-      <p class="emily">i fuckin did it you can register for the lounge now!!!</p>
+      <p class="emily">registration works for real now lmao</p>
       
       <p>pls refrain from pentesting our server its v fragile rn lol</p>
       
@@ -113,6 +113,8 @@
           </p>
           <input type="submit" id="confirmButton" value="register">
         </form>
+        
+        <p class="emily">passwords on this page are unnecessarily limited, just bc idk how escaping works with bcrypt or whatever, but you can change your password later through the lounge.</p>
       
     </div>
     <div id="foot"><?php include "../include/foot.php"; ?></div>
