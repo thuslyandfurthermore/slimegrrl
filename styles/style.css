@@ -176,6 +176,11 @@ form {
   background-color: #222;
 }
 
+select {
+  width: 100%;
+  height: 3em;
+}
+
 .error {
   background-color: #444;
   color: #faa;

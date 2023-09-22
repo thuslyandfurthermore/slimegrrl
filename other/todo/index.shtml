@@ -73,6 +73,7 @@
   </div>
 <script>
     addCurrentTab();
+    getStyle();
 </script>
 </body>
 </html>

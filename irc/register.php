@@ -121,6 +121,7 @@
   </div>
 <script>
   addCurrentTab();
+  getStyle();
 </script>
 
 </body>

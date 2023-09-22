@@ -15,8 +15,20 @@ function addCurrentTab() {
   }
 }
 
+function setStyle() {
+  currentStyle = menu.value;
+  setCookie('currentStyle', currentStyle, 1);
+  getStyle();
+}
+
 function getStyle() {
-  
+  styleElement = document.querySelector('link')
+  const cookieValue = document.cookie
+    .split("; ")
+    .find((row) => row.startsWith("currentStyle="))
+    ?.split("=")[1];
+  console.log(cookieValue)
+  styleElement.setAttribute('href', cookieValue);
 }
 
 function setCookie(cname, cvalue, exdays) {
