@@ -28,6 +28,8 @@
   </div>
 <script>
   addCurrentTab();
+  MIDIjs.initAll(); 
+  MIDIjs.play('VGM1new.mid');
 </script>
 </body>
 </html>
