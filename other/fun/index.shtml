@@ -23,14 +23,16 @@
         <li>add getStyle(); to each page</li>
       </ul>
       
+      <div style="display: flex; flex-direction: row"><a class="bigbutton" href="#" onClick="function(){
+            MIDIjs.initAll();
+            MIDIjs.play('path/to/yoursong.midi');}">play</a></div>
+      
     </div>
     <div id="foot"><!--#include virtual="/include/foot.html" --></div>
     <div id="footscroll"><!--#include virtual="/include/footscroll.html" --></div>
   </div>
 <script>
   addCurrentTab();
-  MIDIjs.initAll(); 
-  MIDIjs.play('VGM1new.mid');
 </script>
 </body>
 </html>
