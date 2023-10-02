@@ -27,8 +27,9 @@ function getStyle() {
     .split("; ")
     .find((row) => row.startsWith("currentStyle="))
     ?.split("=")[1];
-  console.log(cookieValue)
-  styleElement.setAttribute('href', cookieValue);
+  if (cookieValue) {
+    styleElement.setAttribute('href', cookieValue);
+  }
 }
 
 function setCookie(cname, cvalue, exdays) {

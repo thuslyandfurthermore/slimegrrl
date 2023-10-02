@@ -1,0 +1,187 @@
+body {
+  background-color: black;
+  background-size: 135px;
+  font-family: monospace;
+  line-height: 1.5;
+  text-align: left;
+  color: #0f0;
+  }
+  
+h2 {
+  line-height: 1.2;
+}
+
+#container {
+  position: fixed;
+  width: 95%;
+  background-color: black;
+  top: 5px;
+  bottom: 5px;
+  left: 2.5%;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+#main {
+  border: 2px solid white;
+  bottom: 0px;
+  max-height: auto;
+  overflow: auto;
+  flex-grow: 1;
+}
+
+#main p {
+  margin: 10px;
+  margin-bottom: 2em;
+  }
+
+#main h2 {
+  color: #0f0;
+  margin: 10px;
+  text-align: center;
+  }
+
+.emily {
+  color: #0ff;
+  }
+
+.vicky {
+  color: #808;
+  }
+
+#foot, #footscroll {
+  border: 2px solid white;
+  border-top: 0px;
+  bottom: 0px;
+  flex-basis: 50px;
+  flex-shrink: 0;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  height: 50px;
+}
+
+#footscroll {
+  overflow: auto;
+}
+
+#foot .button,.currenttab {
+  flex-grow: 1;
+  text-align: center;
+  flex-direction: column;
+  }
+
+#footscroll .button, #footscroll .currenttab {
+  flex-shrink: 0;
+  flex-grow: 0;
+  text-align: center;
+  flex-direction: column;
+  }
+
+#footscroll .button, #footscroll .currenttab p {
+  padding-left: 10px;
+  padding-right: 10px;
+  }
+
+.button {
+  background-color: #000;
+  border: 1px outset #444;
+}
+.currenttab {
+  background-color: #000;
+  border: 3px inset #444;
+}
+
+.bigbutton {
+  flex-grow: 1;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 100%;
+  background-color: #000;
+  font-size: 150%;
+  line-height: 20px;
+  border: 1px outset #444;
+  font-family: monospace;
+  color: #0f0;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 75%;
+  border: 1px inset #444;
+  position: sticky;
+  left: 0%;
+}
+
+.galtitle {
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  font-size: 120%;
+  padding: 2px;
+  background-color: #000;
+}
+
+.galmain {
+  display: flex;
+  padding: 2px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  border: 1px inset #444;
+  overflow: auto;
+  align-items: center;
+  
+}
+
+.galitem {
+  flex-grow: 1;
+  flex-basis: 31%;
+  margin: 1%;
+  min-width: 90px;
+}
+
+.galitem img {
+  width: 100%;
+}
+
+.galdesc {
+  
+  line-height: 1.5;
+  font-size: 75%;
+  text-align: justify;
+}
+
+li {
+  margin-bottom: 1em;
+  margin-right: 10px;
+  line-height: 1.2;
+}
+
+form {
+  padding: 10px;
+  margin: 10px;
+  background-color: #000;
+}
+
+select {
+  width: 100%;
+  height: 3em;
+}
+
+.error {
+  background-color: #444;
+  color: #f00;
+}
+
+.success {
+  background-color: #444;
+  color: #8f8;
+}

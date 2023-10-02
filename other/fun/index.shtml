@@ -13,23 +13,17 @@
   <div id="container">
     <div id="main">
       
-      <ul class="emily">
-        <li>make form with dropdown items for styles on this page</li>
-        <li>use setCookie function to make a cookie with name "style" and value of dropdown</li>
-        <li>create getStyle function that replaces any "style.css" with the value of the cookie</li>
-        <ul>
-          <li>that way if js isnt enabled itll default to style.css</li>
-        </ul>
-        <li>add getStyle(); to each page</li>
-      </ul>
+      <label for="style">choose your style!</label><br><br>
+      <select name="style" id="style">
+        <option value="/styles/style.css">slimegrrl (default)</option>
+        <option value="/styles/straight.css">less gay</option>
+        <option value="/styles/console.css">console mode</option>
+      </select>
       
-      <form action="">
-        <label for="style">choose your style</label><br><br>
-        <select name="style" id="style">
-          <option value="/styles/style.css">slimegrrl (default)</option>
-          <option value="/styles/straight.css">less gay</option>
-        </select>
-      </form>
+      <br><br>
+      
+      <a href="/irc">irc</a><br><br>
+      <a href="/gallery">gallery</a>
       
     </div>
     <div id="foot"><!--#include virtual="/include/foot.html" --></div>
