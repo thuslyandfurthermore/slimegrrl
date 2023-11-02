@@ -48,7 +48,7 @@ function closePlayer() {
 
 function createAudioDialog(source) {
   document.body.insertAdjacentHTML("beforeend",
-  "<dialog open id = 'player'> <audio controls src = '" + source + "'> <a href = '" + source + "'>download audio</a> </audio> <br> <form method = 'dialog'> <button onclick = 'closePlayer()' style='width: 100%; height: 4em'>close</button> </form> </dialog>"
+  "<dialog open id='player'> <audio controls src='" + source + "'> <a href='" + source + "'>download audio</a> </audio> <br> <form method='dialog'> <button onclick='closePlayer()' style='width: 100%; height: 4em'>close</button> </form> </dialog>"
   );
   
   
