@@ -46,6 +46,36 @@
             <p>a series of photos taken mostly over 2022. i think there's a lot of emotion in them, i was dealing with a lot at the time</p></div>
         </div>
       </div>
+      
+      <br><br><br><br>
+      
+      <div class="gallery emily">
+        <div class="galtitle">
+          betteravia, california, union sugar plant
+        </div>
+        <div class="galmain">
+          <div class="galitem"><a href="media/unionsugar/01.jpg"><img src="media/unionsugar/01.jpg" alt="an overgrown sugar plant, gigantic silo nestled into scrubby vegetation in the distance, closer is a train car over a concrete pit and some construction equipment"></a></div>
+          <div class="galitem"><a href="media/unionsugar/02.jpg"><img src="media/unionsugar/02.jpg" alt="a surprisingly recent no trespassing fence in front of a silo that dwarfs the image"></a></div>
+          <div class="galitem"><a href="media/unionsugar/03.jpg"><img src="media/unionsugar/03.jpg" alt="a dynamic photo taken between two rail lines heading towards the plant, packed to bring with train cars"></a></div>
+          <div class="galitem"><a href="media/unionsugar/04.jpg"><img src="media/unionsugar/04.jpg" alt="a photo of a sort of rusty 5 story tower with ladders and scaffolding leading up and a large broken pipe hanging back down"></a></div>
+          <div class="galitem"><a href="media/unionsugar/05.jpg"><img src="media/unionsugar/05.jpg" alt="a concrete yard filed with rising buildings, train cars, and equipment, with vegetation cracking and breaking the edifice"></a></div>
+          <div class="galitem"><a href="media/unionsugar/06.jpg"><img src="media/unionsugar/06.jpg" alt="an aerial view of the side of a silo that's been broken into, debris and detailed graffiti litter the scene"></a></div>
+          <div class="galitem"><a href="media/unionsugar/07.jpg"><img src="media/unionsugar/07.jpg" alt="an aerial view of a concrete yard surrounded by vegetation"></a></div>
+          <div class="galitem"><a href="media/unionsugar/08.jpg"><img src="media/unionsugar/08.jpg" alt="an over exposed close up from the previous scene showing the junction of brush and building"></a></div>
+          <div class="galitem"><a href="media/unionsugar/09.jpg"><img src="media/unionsugar/09.jpg" alt="a vertigo-y view from the top of a train car to the concrete pit beneath, showing the yin yang connection point between cars"></a></div>
+          <div class="galitem"><a href="media/unionsugar/10.jpg"><img src="media/unionsugar/10.jpg" alt="a detail showing the texture of the corrugated silo where a panel has fallen off, exposing definitely asbestos"></a></div>
+          <div class="galitem"><a href="media/unionsugar/11.jpg"><img src="media/unionsugar/11.jpg" alt="a maze of overgrown piping and massive valving"></a></div>
+          <div class="galitem"><a href="media/unionsugar/12.jpg"><img src="media/unionsugar/12.jpg" alt="a lens flared image of a six foot tall rusty radiator"></a></div>
+          <div class="galitem"><a href="media/unionsugar/13.jpg"><img src="media/unionsugar/13.jpg" alt="a wide concrete funnel"></a></div>
+          <div class="galitem"><a href="media/unionsugar/14.jpg"><img src="media/unionsugar/14.jpg" alt="the interior of a stripped out building that i think used to be a workshop"></a></div>
+          <div class="galitem"><a href="media/unionsugar/15.jpg"><img src="media/unionsugar/15.jpg" alt="a dilapidated stairwell leading to an underground door. water pools at the bottom, scrap metal juts in random directions"></a></div>
+          <div class="galitem"><a href="media/unionsugar/16.jpg"><img src="media/unionsugar/16.jpg" alt="a view of the inside of a silo, up a ladder to a metal grating platform, with metal tubing jutting dangerously in odd directions"></a></div>
+        </div>
+        <div class="galdesc">
+          
+        </div>
+      </div>
+      
       </div>
      <div id="foot"><!--#include virtual="/include/foot.html" --></div>
   </div>
