@@ -70,11 +70,20 @@
           <div class="galitem"><a href="media/unionsugar/14.jpg"><img src="media/unionsugar/14.jpg" alt="the interior of a stripped out building that i think used to be a workshop"></a></div>
           <div class="galitem"><a href="media/unionsugar/15.jpg"><img src="media/unionsugar/15.jpg" alt="a dilapidated stairwell leading to an underground door. water pools at the bottom, scrap metal juts in random directions"></a></div>
           <div class="galitem"><a href="media/unionsugar/16.jpg"><img src="media/unionsugar/16.jpg" alt="a view of the inside of a silo, up a ladder to a metal grating platform, with metal tubing jutting dangerously in odd directions"></a></div>
-        </div>
+          <div class="galitem"><button onclick="createAudioDialog('media/unionsugar/17.mp3')"><img src="/assets/audiobutton.png"></button></div>
         <div class="galdesc">
-          
+          <p>in the 1890s, just as sugar beets were being introduced to america, union sugar refinery was founded just outside the barely 20 year old town of santa maria. a company town was founded, betteravia, meaning,,, sugar beet, that would grow to over 300 residents at its peak.</p>
+          <p>as company towns faded in relevance in the 40s and 50s 
+           the town was shuttered and its residents evicted, but the sugar plant remained a large presence in the economy of santa maria. i know several people who worked there well into the 80s</p>
+          <p>in 88 an explosion occurred in the warehouse while workers moved bags of sugar, maiming 7, and maybe killing several? the plant remained nominally operational for another five years, but its fate was sealed and it was summarily abandoned</p>
+          <p>for a long time the offices looked like they'd just packed up mid day and left. when i was a kid i remember intact glass, papers left on desks, a line of old trucks still functional but ownerless, though the silos looked just the same as they do now. now every wall has been stripped of copper and everything else scrapped to the bones.</p>
+          <p> apparently the railway uses what rail that's intact to store cars, one of the ones i climbed was actually tagged out with new tags, it's gotta have some grain or something in it right now.</p>
+          <p>the audio at the end is an impulse response of one of the pipes that snakes up into one of the smaller silos, i wish id gotten a picture of it lol</p>
+        </div>
         </div>
       </div>
+      
+      <br><br>
       
       </div>
      <div id="foot"><!--#include virtual="/include/foot.html" --></div>

@@ -152,6 +152,12 @@ h2 {
   width: 100%;
 }
 
+.galitem button {
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+}
+
 .galdesc {
   
   line-height: 1.5;
@@ -184,4 +190,9 @@ select {
 .success {
   background-color: #444;
   color: #afa;
+}
+
+dialog {
+  top: 40%;
+  text-align: center;
 }
